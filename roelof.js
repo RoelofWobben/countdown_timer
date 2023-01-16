@@ -1,4 +1,4 @@
-const countToDate = new Date("2023-01-16 09:33:00"); 
+const countToDate = new Date("2023-01-21"); 
 
 const countdown = setInterval(() => {
   const currentDate = new Date()
