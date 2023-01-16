@@ -1,10 +1,15 @@
-const countToDate = new Date("2023-01-21"); 
+const countToDate = new Date("2023-01-16 09:33:00"); 
 
-setInterval(() => {
+const countdown = setInterval(() => {
   const currentDate = new Date()
   const timeBetweenDates = Math.ceil((countToDate - currentDate) / 1000)
+  console.log(timeBetweenDates); 
   flipAllCards(timeBetweenDates)
-}, 250)
+
+  if (timeBetweenDates < 1){
+        clearInterval(countdown); 
+    }
+}, 1000)
 
 function flipAllCards(time) {
   const seconds = time % 60
